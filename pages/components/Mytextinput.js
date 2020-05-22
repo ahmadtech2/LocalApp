@@ -1,7 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
 /*Custom TextInput*/
 import React from 'react';
-import { View, TextInput } from 'react-native';
-const Mytextinput = props => {
+import {View, TextInput} from 'react-native';
+const Mytextinput = (props) => {
   return (
     <View
       style={{

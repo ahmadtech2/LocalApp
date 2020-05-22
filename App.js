@@ -2,8 +2,8 @@
 import React from 'react';
 
 //Import react-navigation
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator} from 'react-navigation-stack';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 //Import external files
 import HomeScreen from './pages/HomeScreen';
@@ -12,13 +12,13 @@ import UpdateUser from './pages/UpdateUser';
 import ViewUser from './pages/ViewUser';
 import ViewAllUser from './pages/ViewAllUser';
 import DeleteUser from './pages/DeleteUser';
- 
+
 const App = createStackNavigator({
   HomeScreen: {
     screen: HomeScreen,
     navigationOptions: {
       title: 'HomeScreen',
-      headerStyle: { backgroundColor: '#f05555' },
+      headerStyle: {backgroundColor: '#f05555'},
       headerTintColor: '#ffffff',
     },
   },
@@ -26,7 +26,7 @@ const App = createStackNavigator({
     screen: ViewUser,
     navigationOptions: {
       title: 'View User',
-      headerStyle: { backgroundColor: '#f05555' },
+      headerStyle: {backgroundColor: '#f05555'},
       headerTintColor: '#ffffff',
     },
   },
@@ -34,7 +34,7 @@ const App = createStackNavigator({
     screen: ViewAllUser,
     navigationOptions: {
       title: 'View All User',
-      headerStyle: { backgroundColor: '#f05555' },
+      headerStyle: {backgroundColor: '#f05555'},
       headerTintColor: '#ffffff',
     },
   },
@@ -42,7 +42,7 @@ const App = createStackNavigator({
     screen: UpdateUser,
     navigationOptions: {
       title: 'Update User',
-      headerStyle: { backgroundColor: '#f05555' },
+      headerStyle: {backgroundColor: '#f05555'},
       headerTintColor: '#ffffff',
     },
   },
@@ -50,7 +50,7 @@ const App = createStackNavigator({
     screen: RegisterUser,
     navigationOptions: {
       title: 'Register User',
-      headerStyle: { backgroundColor: '#f05555' },
+      headerStyle: {backgroundColor: '#f05555'},
       headerTintColor: '#ffffff',
     },
   },
@@ -58,7 +58,7 @@ const App = createStackNavigator({
     screen: DeleteUser,
     navigationOptions: {
       title: 'Delete User',
-      headerStyle: { backgroundColor: '#f05555' },
+      headerStyle: {backgroundColor: '#f05555'},
       headerTintColor: '#ffffff',
     },
   },

@@ -1,12 +1,14 @@
+/* eslint-disable no-alert */
+/* eslint-disable react-native/no-inline-styles */
 /*Screen to view single user*/
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import {Text, View, Button} from 'react-native';
 import Mytextinput from './components/Mytextinput';
 import Mybutton from './components/Mybutton';
-import { openDatabase } from 'react-native-sqlite-storage';
+import {openDatabase} from 'react-native-sqlite-storage';
 //Connction to access the pre-populated user_db.db
-var db = openDatabase({ name: 'user_db.db', createFromLocation : 1});
- 
+var db = openDatabase({name: 'user_db.db', createFromLocation: 1});
+
 export default class ViewUser extends React.Component {
   constructor(props) {
     super(props);
@@ -16,9 +18,9 @@ export default class ViewUser extends React.Component {
     };
   }
   searchUser = () => {
-    const { input_user_id } = this.state;
+    const {input_user_id} = this.state;
     console.log(this.state.input_user_id);
-    db.transaction(tx => {
+    db.transaction((tx) => {
       tx.executeSql(
         'SELECT * FROM table_user where user_id = ?',
         [input_user_id],
@@ -35,7 +37,7 @@ export default class ViewUser extends React.Component {
               userData: '',
             });
           }
-        }
+        },
       );
     });
   };
@@ -44,14 +46,14 @@ export default class ViewUser extends React.Component {
       <View>
         <Mytextinput
           placeholder="Enter User Id"
-          onChangeText={input_user_id => this.setState({ input_user_id })}
-          style={{ padding:10 }}
+          onChangeText={(input_user_id) => this.setState({input_user_id})}
+          style={{padding: 10}}
         />
         <Mybutton
           title="Search User"
           customClick={this.searchUser.bind(this)}
         />
-        <View style={{ marginLeft: 35, marginRight: 35, marginTop: 10 }}>
+        <View style={{marginLeft: 35, marginRight: 35, marginTop: 10}}>
           <Text>User Id: {this.state.userData.user_id}</Text>
           <Text>User Name: {this.state.userData.user_name}</Text>
           <Text>User Contact: {this.state.userData.user_contact}</Text>

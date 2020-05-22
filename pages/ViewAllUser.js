@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /*Screen to view all the user*/
 import React from 'react';
 import {FlatList, Text, View} from 'react-native';
